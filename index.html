@@ -13,7 +13,7 @@
 
 <body>
     <!-- header section start -->
-    <header class="header position-absolute w-100">
+    <header class="header position-absolute w-100 z-3">
         <div class="container">
             <nav class="navbar navbar-expand-md rounded-4 justify-content-between">
                 <a class="navbar-brand" href="#">
@@ -44,7 +44,8 @@
     </header>
     <!-- end header section-->
     <!-- hero section start -->
-    <section class="hero">
+    <section class="hero overflow-hidden">
+        <div class="bg-shape position-absolute"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -58,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExampleIndicators" class="carousel slide d-lg-none">
             <div class="carousel-indicators m-0">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -559,7 +560,8 @@
     </section>
     <!-- Outsourcing services section end -->
     <!-- feature work section start -->
-    <section class="feature-work">
+    <section class="feature-work position-relative overflow-hidden">
+        <div class="ellipse d-none d-lg-block"></div>
         <div class="container d-flex flex-column">
             <h2 class="text-center">Featured work</h2>
             <div class="row gy-4">
@@ -734,8 +736,10 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="our-studio-text d-flex flex-column align-items-center align-items-lg-start justify-content-lg-between">
-                        <h3 class="text-center text-lg-start fw-normal">At Dico Studio, our success is powered by a highly skilled
+                    <div
+                        class="our-studio-text d-flex flex-column align-items-center align-items-lg-start justify-content-lg-between">
+                        <h3 class="text-center text-lg-start fw-normal">At Dico Studio, our success is powered by a
+                            highly skilled
                             team of game
                             developers, 3D artists, animators, and project managers with deep expertise across multiple
                             platforms and genres.</h3>
@@ -1328,7 +1332,8 @@
             <div class="horizontal-row"></div>
             <div class="quick-links text-center d-flex flex-column">
                 <h5>Quick Links</h5>
-                <ul class="quick-section d-flex flex-wrap flex-column list-unstyled mb-0 flex-lg-row justify-content-lg-between">
+                <ul
+                    class="quick-section d-flex flex-wrap flex-column list-unstyled mb-0 flex-lg-row justify-content-lg-between">
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">3D Art & Animation Services</a></li>
                     <li><a href="#">Concept Art & 2D Game Art Services</a></li>

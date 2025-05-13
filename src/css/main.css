@@ -1657,7 +1657,8 @@ a {
 .quick-section {
    gap: 0.75rem;
 }
-.quick-section a{
+
+.quick-section a {
    font-weight: 600;
 }
 
@@ -1702,6 +1703,39 @@ a {
    /* hero */
    .hero {
       padding: 29.62rem 0 29.68rem;
+      position: relative;
+      z-index: 1;
+   }
+
+   .hero::before {
+      position: absolute;
+      content: '';
+      background: url(../images/hero-bg-1.jpg) no-repeat center/cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: -2;
+      transform: scaleX(-1);
+   }
+
+   .hero::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #000 7.57%, rgba(0, 0, 0, 0.00) 26.5%);
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+   }
+
+   .bg-shape {
+      background: linear-gradient(180deg, #000 21.63%, rgba(0, 0, 0, 0.00) 63.24%);
+      transform: rotate(-90deg);
+      inset: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
    }
 
    .our-art-text {
@@ -1777,6 +1811,16 @@ a {
       padding: 10rem 0;
    }
 
+   .we-worked .ellipse {
+      --width: 46.625rem;
+      --height: 23.0625rem;
+      --rounded: 46.625rem;
+      --bg-color: rgba(198, 224, 102, 0.12);
+      --filter: blur(250px);
+      --left: -15.125rem;
+      --top: -3.1875rem;
+   }
+
    .client-logo {
       --gap: 5.375rem;
       --image-size: 14.338rem;
@@ -1826,6 +1870,24 @@ a {
       --row-gap: 6rem;
       --space-y: 12.5rem;
       padding-top: var(--space-y);
+   }
+
+
+   .Partner-with-dico-studio .line {
+      --width: 119.969rem;
+      --height: 71.99681rem;
+      --right: 0.0155rem;
+      --top: 0;
+      bottom: -14.74681rem;
+   }
+
+   .Partner-with-dico-studio .ellipse {
+      --width: 183.25rem;
+      --height: 23.0625rem;
+      --rounded: 183.25rem;
+      --filter: blur(250px);
+      --left: -31.625rem;
+      --top: 0;
    }
 
    .our-studio-text h3 {
@@ -1887,6 +1949,7 @@ a {
    }
 
    /* feature word */
+
    .feature-work {
       --space-y: 7.5rem;
       --row-gap: 6rem;
@@ -1901,6 +1964,16 @@ a {
    .feature-title {
       font-size: 2rem;
    }
+   .feature-work .ellipse {
+    --width: 28.5rem;
+    --height: 23.0625rem;
+    --rounded:28.5rem;  
+    --bg-color: rgba(235, 255, 163, 0.20);
+    --filter: blur(250px);
+    --left: auto;
+    --top: 40.75rem;
+    right: -7.6875rem;
+}
 
    /* development */
    .development .section-sub-title {
@@ -2122,41 +2195,51 @@ a {
       /* height: calc(100% - var(--space-y)); */
       bottom: var(--space-y);
    }
-   .elevate-your-game-img img{
+
+   .elevate-your-game-img img {
       width: 100%;
       height: 100%;
    }
+
    .elevate-your-game-img {
-    --width: 54.875rem;
-    --height: 55.125rem;
-    aspect-ratio: 439/441;
-}
-   .elevate-your-game-content{
+      --width: 54.875rem;
+      --height: 55.125rem;
+      aspect-ratio: 439/441;
+   }
+
+   .elevate-your-game-content {
       padding: 14.636rem 0;
    }
-   .gamer-bg-shape{
+
+   .gamer-bg-shape {
       width: 61.63rem;
       height: 18.319rem;
    }
-   .gamer-bg-shape:first-child{
+
+   .gamer-bg-shape:first-child {
       height: 20.03rem;
    }
-   .gamer-bg-shape svg{
+
+   .gamer-bg-shape svg {
       width: 100%;
       height: 100%;
    }
+
    /* footer */
-   .contact-social-media{
+   .contact-social-media {
       max-width: 50.69rem;
       margin: 0 auto;
    }
-   .quick-section a{
+
+   .quick-section a {
       font-size: 1.25rem;
    }
-   .footer-menu{
+
+   .footer-menu {
       gap: 2rem;
    }
-   .footer-menu a{
+
+   .footer-menu a {
       font-size: 1.25rem;
    }
 
