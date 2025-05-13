@@ -1700,6 +1700,11 @@ a {
       --bs-body-line-height: 1.5rem;
    }
 
+   /* navbar */
+   .navbar {
+      --bs-nav-link-font-size: 1.25rem;
+   }
+
    /* hero */
    .hero {
       padding: 29.62rem 0 29.68rem;
@@ -1729,14 +1734,6 @@ a {
       z-index: -1;
    }
 
-   .bg-shape {
-      background: linear-gradient(180deg, #000 21.63%, rgba(0, 0, 0, 0.00) 63.24%);
-      transform: rotate(-90deg);
-      inset: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-   }
 
    .our-art-text {
       letter-spacing: 0.04631rem;
@@ -1964,16 +1961,17 @@ a {
    .feature-title {
       font-size: 2rem;
    }
+
    .feature-work .ellipse {
-    --width: 28.5rem;
-    --height: 23.0625rem;
-    --rounded:28.5rem;  
-    --bg-color: rgba(235, 255, 163, 0.20);
-    --filter: blur(250px);
-    --left: auto;
-    --top: 40.75rem;
-    right: -7.6875rem;
-}
+      --width: 28.5rem;
+      --height: 23.0625rem;
+      --rounded: 28.5rem;
+      --bg-color: rgba(235, 255, 163, 0.20);
+      --filter: blur(250px);
+      --left: auto;
+      --top: 40.75rem;
+      right: -7.6875rem;
+   }
 
    /* development */
    .development .section-sub-title {
@@ -2243,4 +2241,25 @@ a {
       font-size: 1.25rem;
    }
 
+}
+
+/* @keyframes marquee {
+   0% {
+      transform: translateX(0%);
+   }
+
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+.our-art-item {
+   animation: marquee 30s linear infinite;
+} */
+.hero-slider {
+   min-height: 100vh;
+   background: url(../images/hero-bg-1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right center;
 }
