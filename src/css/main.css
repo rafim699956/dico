@@ -36,7 +36,6 @@
    --bs-link-hover-color-rgb: 44, 254, 144;
 }
 
-
 /* typrography */
 .h1,
 .h2,
@@ -80,7 +79,6 @@ h2 {
 
 .h1,
 h1 {
-   /* text-shadow: var(--inner-shadow); */
    font-size: 2rem;
    line-height: normal;
    letter-spacing: 0.12rem;
@@ -163,71 +161,6 @@ a {
    font-size: 0.75rem;
 }
 
-
-/* .h6,
-h6 {
-   font-size: 12px;
-   line-height: 15px;
-}
-
-@media (min-width:1200px) {
-
-   .h6,
-   h6 {
-      font-size: 20px;
-      line-height: 24px;
-   }
-} */
-
-/* 
-.body-lg {
-   font-size: 16px;
-   line-height: 20px;
-}
-
-@media (min-width:1200px) {
-
-   .body-lg {
-      font-size: 20px;
-      line-height: 24px;
-   }
-}
-
-.body-md {
-   font-size: 14px;
-   line-height: 17px;
-}
-
-@media (min-width:1200px) {
-
-   .body-md {
-      font-size: 18px;
-      line-height: 24px;
-   }
-}
-
-.body-sm {
-   font-size: 12px;
-   line-height: 15px;
-}
-
-@media (min-width:1200px) {
-
-   .body-sm {
-      font-size: 16px;
-      line-height: 20px;
-   }
-} */
-
-/* .grid {
-   --gap-x: 1.125rem;
-   --gap-y: 1.25rem;
-   --column: 2;
-   display: grid;
-   gap: var(--gap-x) var(--gap-y);
-   grid-template-columns: repeat(var(--column), minmax(0, 1fr));
-} */
-
 /* utilitis */
 @media (min-width: 1400px) {
    .container {
@@ -258,9 +191,6 @@ h6 {
    }
 }
 
-/* .section-title{
-   margin-bottom: 2rem;
-} */
 img {
    object-fit: cover;
 }
@@ -278,6 +208,7 @@ a {
 .carousel-indicators {
    --gap: 0.5rem;
    gap: var(--gap);
+   z-index: 99999999999;
 }
 
 .gradient-box {
@@ -289,7 +220,6 @@ a {
    position: relative;
    background: #000;
    background-clip: padding-box;
-   /* border: solid var(--border) transparent; */
    border-radius: var(--rounded);
    z-index: 1;
 }
@@ -456,10 +386,6 @@ a {
    height: var(--size);
 }
 
-/* .container {
-   max-width: 1304px;
-} */
-
 /* navigation bar style start */
 .navbar {
    --bs-navbar-padding-y: 0.37rem;
@@ -602,8 +528,6 @@ a {
 }
 
 /* navigation bar style end */
-/* hero section style start */
-
 /* hero slider start */
 .hero-slider {
    padding: 3.75rem 0;
@@ -634,10 +558,6 @@ a {
    background: linear-gradient(-0.26deg, #000 5.94%, rgba(0, 0, 0, 0.00) 63.2%);
    z-index: 2;
 }
-
-
-/*  hero slider end*/
-
 
 .hero-content h1 {
    margin-bottom: 0.5rem;
@@ -699,7 +619,7 @@ a {
    z-index: 99;
 }
 
-/* hero section style end */
+/*  hero slider end*/
 /* art section style start */
 .art-section {
    background: #292634;
@@ -711,7 +631,6 @@ a {
 }
 
 .our-art-img {
-   /* box-shadow: inset 2.15988px 2.15988px 6.47964px #FF6357; */
    --size: 1.5rem;
    width: var(--size);
    height: var(--size);
@@ -723,18 +642,18 @@ a {
 }
 
 /* art section style end */
-/* our-client-partners section style start */
-.our-client-partner {
+/* about-uss section style start */
+.about-us {
    padding: 3.38rem 0;
 }
 
-.our-client-partner .gradient-box {
+.about-us .gradient-box {
    --size: 3.75rem;
    width: var(--size);
    height: var(--size);
 }
 
-.our-client-partner .container {
+.about-us .container {
    row-gap: var(--row-gap);
 }
 
@@ -750,7 +669,6 @@ a {
 
 .gradient-border-box .content {
    background-image: linear-gradient(45deg, #FFFFFFC4, #FFFFFF0D);
-   /* border-radius: 0.7635rem; */
 }
 
 /*  */
@@ -846,7 +764,7 @@ a {
    z-index: -1;
 }
 
-/* our-client-partners section style end */
+/* about-uss section style end */
 /*  Game's we've worked on section start */
 .we-worked {
    padding-bottom: 3.38rem;
@@ -929,16 +847,6 @@ a {
    opacity: 0.3;
 }
 
-/* .dico-studio-info .gradient-box {
-   --border: 1px;
-   --rounded: 0.5rem;
-   --linear-border: linear-gradient(to right, #FFFFFFC4, #FFFFFF0D);
-   --inner-space: 1rem;
-   --inner-bg: #FFFFFF1F;
-   --inner-item-space-y: 0.688rem;
-   --inner-item-space-x: 0.563rem;
-} */
-
 .dico-studio-info .gradient-box::before {
    backdrop-filter: blur(7.905138969421387px);
 }
@@ -985,13 +893,13 @@ a {
 }
 
 /* Why Partner with Dico Studio end */
-/* Outsourcing services section start */
-.outsourcing-services {
+/* animation-sevice services section start */
+.animation-sevice {
    --space-y: 2rem;
    padding: var(--space-y) 0;
 }
 
-.outsourcing-services .ellipse {
+.animation-sevice .ellipse {
    --width: 89.35275rem;
    --height: 39.60669rem;
    --rounded: 89.35275rem;
@@ -1005,7 +913,7 @@ a {
    /* mix-blend-mode: overlay; */
 }
 
-.outsourcing-services .ellipse-2 {
+.animation-sevice .ellipse-2 {
    --width: 87.76844rem;
    --height: 14.73369rem;
    --rounded: 0;
@@ -1019,7 +927,7 @@ a {
    mix-blend-mode: overlay;
 }
 
-.outsourcing-services .container {
+.animation-sevice .container {
    gap: var(--row-gap);
 }
 
@@ -1066,11 +974,6 @@ a {
    overflow: hidden;
 }
 
-/* .card-section {
-   --space-y: 1.125rem;
-   --space-x: 1.081rem;
-   padding: var(--space-y) var(--space-x);
-} */
 
 .art-animation-header-text {
    padding: 2rem 1rem;
@@ -1087,28 +990,6 @@ a {
    --gap: 0.75rem;
    gap: var(--gap);
 }
-
-/* .card-item {
-   --space-y: 0.75rem;
-   --space-x: 0.5rem;
-   --rounded: 0.75rem;
-   --border-width: 0.217px;
-   --border-color: rgba(255, 255, 255, 0.20);
-   --background-color: rgba(255, 255, 255, 0.08);
-   --inner-space: 0.41rem;
-   --inner-border-width: 0.549px;
-   --inner-background-color: rgba(255, 255, 255, 0.16);
-   --inner-size: 1.75rem;
-   --font-size: 0.75rem;
-   --gap: 0.5rem;
-   padding: var(--space-y) var(--space-x);
-   border-radius: var(--rounded);
-   border: var(--border-width) solid var(--border-color);
-   background: var(--background-color);
-   backdrop-filter: blur(0.7598101496696472px);
-   gap: var(--gap);
-   transition: all linear .3s;
-} */
 
 .card-item .card-img {
    width: 100%;
@@ -1165,14 +1046,12 @@ a {
    gap: var(--gap);
 }
 
-/* Outsourcing services section start end */
+/* animation-sevice services section start end */
 /* feature work section start */
 .feature-work {
    --space-y: 3.38rem;
    padding: var(--space-y) 0;
 }
-
-
 
 .feature-work .container {
    gap: var(--row-gap);
@@ -1565,7 +1444,6 @@ a {
    gap: var(--row-gap);
 }
 
-
 .elevate-your-game .line {
    --width: 21.4375rem;
    --height: 14.84138rem;
@@ -1851,7 +1729,7 @@ a {
       --shape-top: 3.76rem;
    }
 
-   .our-client-partner .container {
+   .about-us .container {
       position: relative;
    }
 
@@ -1861,12 +1739,12 @@ a {
       bottom: -2.894rem;
    }
 
-   .our-client-partner {
+   .about-us {
       --row-gap: 7.5rem;
       padding: 7.5rem 0 5.75rem;
    }
 
-   .our-client-partner .gradient-box {
+   .about-us .gradient-box {
       --inner-space: 0.75rem;
       --rounded: 2.625rem;
       --size: 12.75rem;
@@ -1968,16 +1846,13 @@ a {
       font-size: 2.625rem;
    }
 
-   /* outsourcing */
-   .outsourcing-services {
+   /* animation-sevice */
+   .animation-sevice {
       --space-y: 8.063rem;
       --row-gap: 6rem;
    }
 
-   /* outsourcing */
-
-
-
+   /* animation-sevice */
 
    .card-item {
       --space-y: 2rem;
@@ -2013,7 +1888,7 @@ a {
       margin-bottom: 0.5rem;
    }
 
-   .outsourcing-services .section-title {
+   .animation-sevice .section-title {
       margin-bottom: 6rem;
    }
 
@@ -2319,24 +2194,3 @@ a {
    }
 
 }
-
-/* @keyframes marquee {
-   0% {
-      transform: translateX(0%);
-   }
-
-   100% {
-      transform: translateX(-100%);
-   }
-}
-
-.our-art-item {
-   animation: marquee 30s linear infinite;
-} */
-/* .hero-slider {
-   min-height: 100vh;
-   background: url(../images/hero-bg-1.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: right center;
-} */
