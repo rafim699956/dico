@@ -581,6 +581,7 @@ a {
 
 .header {
    top: 1rem;
+   z-index: 999;
 }
 
 .header .navbar {
@@ -602,13 +603,41 @@ a {
 
 /* navigation bar style end */
 /* hero section style start */
-.hero {
-   padding: 7rem 0 3.5rem;
+
+/* hero slider start */
+.hero-slider {
+   padding: 3.75rem 0;
 }
 
 .hero-content {
-   padding-bottom: 0.54rem;
+   padding-top: 3.875rem;
+   margin-bottom: 3.438rem;
 }
+
+.hero-bg-img {
+   height: 21.375rem;
+}
+
+.bg-gradient-shape {
+   width: 375px;
+   height: 388.71px;
+   top: -46.3px;
+   bottom: -2.1px;
+   background: linear-gradient(180deg, #000 5.94%, rgba(0, 0, 0, 0.00) 27.78%);
+   z-index: 1;
+}
+
+.shape-2 {
+   width: 375px;
+   height: 353.75px;
+   top: -12px;
+   background: linear-gradient(-0.26deg, #000 5.94%, rgba(0, 0, 0, 0.00) 63.2%);
+   z-index: 2;
+}
+
+
+/*  hero slider end*/
+
 
 .hero-content h1 {
    margin-bottom: 0.5rem;
@@ -1705,6 +1734,54 @@ a {
       --bs-nav-link-font-size: 1.25rem;
    }
 
+   /* hero slider start */
+   .hero-slider {
+      padding: 0;
+   }
+
+   .hero-bg-img {
+      height: 80.0625rem;
+   }
+
+   .hero-content {
+      position: absolute;
+      z-index: 9999;
+      padding: 29.7rem 0;
+      max-width: 45.25rem;
+   }
+
+   .bg-gradient-shape {
+      width: 2277px;
+      height: 1280px;
+      left: -28px;
+      bottom: 27px;
+      background: linear-gradient(0deg, #000 7.57%, rgba(0, 0, 0, 0.00) 26.5%);
+      z-index: 1;
+      top: 0;
+
+   }
+
+   .shape-2 {
+      width: 2277px;
+      height: 1280px;
+      background: linear-gradient(180deg, #000 8.24%, rgba(0, 0, 0, 0.50) 22.01%, rgba(0, 0, 0, 0.00) 35.79%);
+      z-index: 2;
+      left: -28px;
+      bottom: 27px;
+      top: 0;
+   }
+
+   .shape-3 {
+      background: linear-gradient(90deg, #000 8.24%, rgba(0, 0, 0, 0.50) 22.01%, rgba(0, 0, 0, 0.00) 35.79%);
+      z-index: 3;
+      top: 11.93px;
+      bottom: 27.07px;
+      left: -28px;
+      right: 117px;
+   }
+
+   /* hero slider end */
+
    /* hero */
    .hero {
       padding: 29.62rem 0 29.68rem;
@@ -2256,10 +2333,10 @@ a {
 .our-art-item {
    animation: marquee 30s linear infinite;
 } */
-.hero-slider {
+/* .hero-slider {
    min-height: 100vh;
    background: url(../images/hero-bg-1.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: right center;
-}
+} */
