@@ -318,7 +318,7 @@ a {
    --bs-accordion-btn-active-icon: url("../images/arrow-active.svg");
    gap: var(--gap);
    --bs-accordion-btn-focus-box-shadow: none;
-
+    --bs-accordion-inner-border-radius:0.75rem;
    --bs-accordion-btn-padding-x: 0.75rem;
    --bs-accordion-btn-padding-y: 1rem;
    --bs-accordion-active-bg: transparent;
@@ -326,17 +326,21 @@ a {
 }
 
 .accordion-item {
-   display: flex;
-   flex-direction: column;
    border-radius: var(--bs-accordion-border-radius);
    background: var(--bs-accordion-bg);
+   border: 1px solid transparent;
    overflow: hidden;
-   border: 1px solid var(--bs-accordion-border-color);
+}
+.accordion-item:first-of-type {
+    border-radius: var(--bs-accordion-border-radius);
+}
+.accordion-item:has(.collapse.show){
+   border-color: var(--bs-accordion-border-color);
 }
 
-.accordion-item:not(:first-of-type) {
-   border-top: var(--bs-accordion-border-width);
-}
+/* .accordion-item:not(:first-of-type) {
+   border-top: transparent;
+} */
 
 .accordion-body {
    padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
@@ -346,10 +350,10 @@ a {
 }
 
 .accordion-item .accordion-button {
+   --gap: 0.75rem;
    font-size: 0.875rem;
    font-weight: 600;
    line-height: normal;
-   --gap: 0.75rem;
    gap: var(--gap);
    justify-content: space-between;
 }
@@ -439,7 +443,6 @@ a {
    --bs-btn-hover-color: #010101;
    --btn-hover-box-shadow: 0px 8px 12px 0px rgba(255, 255, 255, 0.32);
    border: none;
-   text-transform: capitalize;
    box-shadow: var(--bs-btn-box-shadow);
    transition: all .15s ease-in-out;
 
@@ -898,7 +901,6 @@ a {
 /* animation-sevice services section start */
 .animation-sevice {
    --space-y: 2rem;
-   padding: var(--space-y) 0;
 }
 
 .animation-sevice .ellipse {
@@ -974,8 +976,8 @@ a {
 
 
 .art-animation-header-text {
-   padding: 2rem 1rem;
-   background: #FFFFFF29;
+   padding: 1.603rem 1.08rem;
+   background: linear-gradient(to left, #222223 0%, #161616 100%);
 }
 
 .art-animation-inner {
@@ -1166,7 +1168,6 @@ a {
 /* team member section start */
 .team {
    --space-y: 3.38rem;
-   padding: var(--space-y) 0;
 }
 
 .team-wrapper {
@@ -1187,7 +1188,7 @@ a {
 }
 
 .single-team-member {
-   --bs-card-border-radius: 1.06594rem;
+   --bs-card-border-radius: 1.60769rem;
    --bs-card-title-spacer-y: 0.75rem;
    background: transparent;
 }
@@ -1195,6 +1196,7 @@ a {
 .single-team-member img {
    --width: 15.625rem;
    --height: 14.32356rem;
+   display: block;
    width: var(--width);
    height: var(--height);
 }
@@ -1212,7 +1214,6 @@ a {
 .development {
    --space-y: 3.38rem;
    --row-gap: 2.62rem;
-   padding: var(--space-y) 0;
    gap: var(--row-gap);
 }
 
@@ -1251,7 +1252,6 @@ a {
    --gap: 6.25rem;
    --icons-size: 5rem;
    gap: var(--gap);
-   padding-left: 1rem;
    position: relative;
 }
 
@@ -1393,7 +1393,7 @@ a {
    border: var(--border-width) solid var(--bs-gray);
    background: var(--bg-color);
    backdrop-filter: blur(1.3863670825958252px);
-   width: calc(50% - var(--gap));
+   min-width: calc(50% - var(--gap));
 }
 
 /* game engine section end */
@@ -1401,7 +1401,6 @@ a {
 .faq {
    --space-y: 3.38rem;
    --row-gap: 2.62rem;
-   padding: var(--space-y) 0;
 }
 
 .faq .ellipse {
@@ -1423,7 +1422,6 @@ a {
 .elevate-your-game {
    --row-gap: 2.62rem;
    --space-y: 3.38rem;
-   padding: var(--space-y) 0;
    gap: var(--row-gap);
 }
 
