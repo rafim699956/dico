@@ -178,19 +178,6 @@ a {
    --bs-gutter-x: 2rem;
 }
 
-@media (max-width: 375px) {
-
-   .container,
-   .container-fluid,
-   .container-lg,
-   .container-md,
-   .container-sm,
-   .container-xl,
-   .container-xxl {
-      max-width: 343px;
-   }
-}
-
 img {
    object-fit: cover;
 }
@@ -198,6 +185,12 @@ img {
 section,
 footer {
    --row-gap: 2rem;
+   --space-y: 3.38rem;
+   padding: var(--space-y) 0;
+}
+
+section .container {
+   gap: var(--row-gap);
 }
 
 a {
@@ -214,7 +207,7 @@ a {
 .gradient-box {
    --border: 1px;
    --rounded: 0.7635rem;
-   --linear-border: linear-gradient(to right, #FFFFFFC4, #FFFFFF0D);
+   --linear-border: linear-gradient(to right, #FFFFFFC4 0%, #FFFFFF0D 100%);
    --inner-space: 0.19088rem;
    --inner-bg: rgba(255, 255, 255, 0.12);
    position: relative;
@@ -388,7 +381,7 @@ a {
 
 /* navigation bar style start */
 .navbar {
-   --bs-navbar-padding-y: 0.37rem;
+   --bs-navbar-padding-y: 0.349rem;
    --bs-navbar-padding-x: 1rem;
    --bs-navbar-brand-padding-y: 0;
    --bs-navbar-brand-margin-end: 0;
@@ -507,7 +500,7 @@ a {
 
 .header {
    top: 1rem;
-   z-index: 999;
+   z-index: 9999999999;
 }
 
 .header .navbar {
@@ -530,32 +523,48 @@ a {
 /* navigation bar style end */
 /* hero slider start */
 .hero-slider {
-   padding: 3.75rem 0;
+   padding: 0 0 3.79rem;
 }
 
 .hero-content {
-   padding-top: 3.875rem;
+   padding-top: 7rem;
    margin-bottom: 3.438rem;
+   position: relative;
+   z-index: 99999;
 }
 
 .hero-bg-img {
    height: 21.375rem;
 }
 
+.hero-bg-img img {
+   width: 42.687rem;
+   height: 21.375rem;
+   position: absolute;
+   left: -14.3rem;
+}
+
 .bg-gradient-shape {
-   width: 375px;
+   width: 100%;
    height: 388.71px;
-   top: -46.3px;
-   bottom: -2.1px;
+   top: -34.3px;
+   left: 1.75px;
+   right: -1.59px;
+   bottom: -0.66px;
+   transform: rotate(-179.74deg);
    background: linear-gradient(180deg, #000 5.94%, rgba(0, 0, 0, 0.00) 27.78%);
    z-index: 1;
 }
 
 .shape-2 {
-   width: 375px;
+   width: 100%;
    height: 353.75px;
    top: -12px;
-   background: linear-gradient(-0.26deg, #000 5.94%, rgba(0, 0, 0, 0.00) 63.2%);
+   bottom: -1.44px;
+   left: 1.07px;
+   right: -2.66px;
+   transform: rotate(0.259deg);
+   background: linear-gradient(180deg, #000 5.94%, rgba(0, 0, 0, 0.00) 63.2%);
    z-index: 2;
 }
 
@@ -626,7 +635,7 @@ a {
 }
 
 .our-art {
-   padding: 1.06rem 0;
+   padding: 0.88rem 0;
    gap: 1.5rem;
 }
 
@@ -643,18 +652,11 @@ a {
 
 /* art section style end */
 /* about-uss section style start */
-.about-us {
-   padding: 3.38rem 0;
-}
 
 .about-us .gradient-box {
    --size: 3.75rem;
    width: var(--size);
    height: var(--size);
-}
-
-.about-us .container {
-   row-gap: var(--row-gap);
 }
 
 .client_partners {
@@ -692,10 +694,10 @@ a {
 }
 
 .fidback_item {
-   --space: 1rem;
+   --border: 0.026rem;
+   --space: calc(1rem - var(--border));
    --inner-space-y: 2.19rem;
    --rounded: 0.637rem;
-   --border: 0.42px;
    --content-pr: 1.608rem;
    --font-size: 14px;
    --line-height: 17px;
@@ -767,7 +769,7 @@ a {
 /* about-uss section style end */
 /*  Game's we've worked on section start */
 .we-worked {
-   padding-bottom: 3.38rem;
+   padding-top: 0;
    gap: var(--row-gap);
 }
 
@@ -789,7 +791,11 @@ a {
 /* Why Partner with Dico Studio start */
 .Partner-with-dico-studio {
    --space-y: 2rem;
-   padding: var(--space-y) 0;
+   --row-gap:1.5rem;
+}
+
+.Partner-with-dico-studio h2 {
+   padding-inline: 1.25rem;
 }
 
 .Partner-with-dico-studio .ellipse {
@@ -827,10 +833,6 @@ a {
    --linear-border: linear-gradient(to right, #77C4FF, #77C4FF52);
    --inner-space: 0.19088rem;
    --inner-bg: #77C4FF0A;
-}
-
-.Partner-with-dico-studio .container {
-   gap: var(--row-gap);
 }
 
 .Partner-with-dico-studio .parent {
@@ -925,10 +927,6 @@ a {
    bottom: var(--bottom);
    opacity: 0.5;
    mix-blend-mode: overlay;
-}
-
-.animation-sevice .container {
-   gap: var(--row-gap);
 }
 
 .art-animation {
@@ -1053,9 +1051,6 @@ a {
    padding: var(--space-y) 0;
 }
 
-.feature-work .container {
-   gap: var(--row-gap);
-}
 
 .feature-work .gradient-box {
    --border: 2px;
@@ -1115,10 +1110,6 @@ a {
    bottom: 2.04356rem;
 }
 
-.about-our-studio .container {
-   gap: var(--row-gap);
-}
-
 .about-our-studio .row {
    --bs-gutter-y: 2rem;
    --bs-gutter-x: 2rem;
@@ -1176,10 +1167,6 @@ a {
 .team {
    --space-y: 3.38rem;
    padding: var(--space-y) 0;
-}
-
-.team .container {
-   gap: var(--row-gap);
 }
 
 .team-wrapper {
@@ -1431,10 +1418,6 @@ a {
    right: var(--right);
 }
 
-.faq .container {
-   gap: var(--row-gap);
-}
-
 /* faq section end */
 /* elevate-your-game section start */
 .elevate-your-game {
@@ -1619,6 +1602,14 @@ a {
 
    .hero-bg-img {
       height: 80.0625rem;
+   }
+
+   .hero-bg-img img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      left: 0;
    }
 
    .hero-content {
